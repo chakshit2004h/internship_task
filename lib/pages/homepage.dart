@@ -33,7 +33,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: GestureDetector(
         onTap: () {
           if (_isNavBarVisible) {
@@ -100,19 +100,15 @@ class _HomepageState extends State<Homepage> {
                 },
                 child: AnimatedOpacity(
                   opacity: _isRollerVisible ? 1.0 : 0.0, // Fade in/out the roller button
-                  duration: const Duration(milliseconds: 200), // Animation duration
+                  duration: const Duration(milliseconds: 10), // Animation duration
                   child: Container(
-                    width: 15,
-                    height: 100,
-                    color: Colors.grey, // Roller color
+                    width: 8,
+                    height: 150,
+                    decoration:const BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomRight: Radius.circular(20),),
+                    ), // Roller color
                     alignment: Alignment.center,
-                    child: Icon(
-                      _isNavBarVisible
-                          ? Icons.arrow_back_ios
-                          : Icons.arrow_forward_ios,
-                      color: Colors.white,
-                      size: 16,
-                    ),
                   ),
                 ),
               ),
