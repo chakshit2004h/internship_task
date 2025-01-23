@@ -19,8 +19,8 @@ class _HomepageState extends State<Homepage> {
   int _selectedIndex = 0;
 
   // Track the visibility of the navigation bar
-  bool _isNavBarVisible = true;  // Start with the nav bar visible
-  bool _isRollerVisible = true;  // Track the visibility of the roller button
+  bool _isNavBarVisible = true; // Start with the nav bar visible
+  bool _isRollerVisible = true; // Track the visibility of the roller button
 
   // Define the content for each page
   final List<Widget> _pages = [
@@ -33,6 +33,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.black87,
       appBar: const CustomAppBar(),
       body: GestureDetector(
         onTap: () {
@@ -65,18 +66,26 @@ class _HomepageState extends State<Homepage> {
                 ),
                 // Main Content Area (Adjusts based on navigation bar visibility)
                 Positioned.fill(
-                  left: _isNavBarVisible ? 80 : 0, // Adjust the left padding
+                  left: _isNavBarVisible ? 80 : 0,
                   child: Container(
                     color: Colors.black87,
                     child: Column(
                       children: [
-                        // Listen to the visibility state
+                        // Animated visibility for main page
                         ValueListenableBuilder<bool>(
                           valueListenable: isContentVisible,
                           builder: (context, isVisible, child) {
-                            return isVisible
-                                ? const mainPage() // Show MainPage when visible
-                                : const SizedBox(); // Hide MainPage when not visible
+                            return AnimatedOpacity(
+                              opacity: isVisible ? 1.0 : 0.0,
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeInOut,
+                              child: AnimatedSlide(
+                                offset: isVisible ? Offset.zero : const Offset(0, 0.1),
+                                duration: const Duration(milliseconds: 500),
+                                curve: Curves.easeInOut,
+                                child: isVisible ? const mainPage() : const SizedBox(),
+                              ),
+                            );
                           },
                         ),
                         // Display the corresponding page
@@ -102,11 +111,14 @@ class _HomepageState extends State<Homepage> {
                   opacity: _isRollerVisible ? 1.0 : 0.0, // Fade in/out the roller button
                   duration: const Duration(milliseconds: 10), // Animation duration
                   child: Container(
-                    width: 8,
+                    width: 15,
                     height: 150,
-                    decoration:const BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.grey,
-                      borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomRight: Radius.circular(20),),
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
                     ), // Roller color
                     alignment: Alignment.center,
                   ),

@@ -44,7 +44,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(width: 80),
+          const SizedBox(width: 10),
           PopupMenuButton<String>(
             color: Colors.black87,
             icon: const Icon(
