@@ -30,7 +30,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_1 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_1 ? mq.height * 0.08 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -58,7 +58,7 @@ class _mainPageState extends State<mainPage> {
                                   "Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                 Text(
+                                Text(
                                   "--",
                                   style: AppWidget.lightTextStyle(),
                                 ),
@@ -187,7 +187,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_2 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_2 ? mq.height * 0.08 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -202,7 +202,7 @@ class _mainPageState extends State<mainPage> {
                     ),
                   ),
                   // Wrap the columns in a horizontally scrollable view
-                 Expanded(
+                  Expanded(
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -215,7 +215,7 @@ class _mainPageState extends State<mainPage> {
                                   "Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                 Text(
+                                Text(
                                   "--",
                                   style: AppWidget.lightTextStyle(),
                                 ),
@@ -344,7 +344,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_3 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_3 ? mq.height * 0.08 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
