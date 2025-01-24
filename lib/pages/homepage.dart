@@ -24,109 +24,130 @@ class _HomepageState extends State<Homepage> {
 
   // Define the content for each page
   final List<Widget> _pages = [
-    const Center(child: SizedBox()), // Empty widget for the dashboard
+    const Center(child: Text('Dashboard')), // Example for the dashboard
     const TextPage(), // TextPage, assuming this page exists in your project
-    const Center(child: SizedBox()),
+    const Center(child: Text('Another Page')),
   ];
 
   @override
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.transparent, // Ensure the screen's base background is transparent
       appBar: const CustomAppBar(),
-      body: GestureDetector(
-        onTap: () {
-          if (_isNavBarVisible) {
-            setState(() {
-              _isNavBarVisible = false; // Hide the nav bar when clicked anywhere
-              _isRollerVisible = true; // Show the roller button again when the nav bar is hidden
-            });
-          }
-        },
-        child: Stack(
-          children: [
-            // Main Content Area (wrapped inside Stack)
-            Stack(
-              children: [
-                // Left Navigation Bar (with sliding animation)
-                AnimatedPositioned(
-                  duration: const Duration(milliseconds: 300),
-                  left: _isNavBarVisible ? 0 : -80, // Slide in/out
-                  top: 0,
-                  bottom: 0,
+      body: Stack(
+        children: [
+          // Main Content Area
+          GestureDetector(
+            onTap: () {
+              if (_isNavBarVisible) {
+                setState(() {
+                  _isNavBarVisible = false; // Hide the nav bar when clicking anywhere
+                  _isRollerVisible = true; // Show the roller button again
+                });
+              }
+            },
+            child: Container(
+              color: Colors.grey[900], // Main background color for the screen
+              child: Column(
+                children: [
+                  Expanded(
+                    child: IndexedStack(
+                      index: _selectedIndex,
+                      children: _pages, // Display the selected page
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // Navigation Bar and Overlay Controls
+          Stack(
+            children: [
+              // Left Navigation Bar (with sliding animation)
+              AnimatedPositioned(
+                duration: const Duration(milliseconds: 300),
+                left: _isNavBarVisible ? 0 : -80, // Slide in/out
+                top: 0,
+                bottom: 0,
+                child: Container(
+                  width: 80,
+                  color: Colors.black87, // Navigation bar background color
                   child: Navigation_Bar(
                     onPageSelected: (index) {
                       setState(() {
                         _selectedIndex = index; // Update the selected page
-                        // Do not hide the navigation bar when selecting a page
                       });
                     },
                   ),
                 ),
-                // Main Content Area (Adjusts based on navigation bar visibility)
-                Positioned.fill(
-                  left: _isNavBarVisible ? 80 : 0,
-                  child: Container(
-                    color: Colors.black87,
-                    child: Column(
-                      children: [
-                        // Animated visibility for main page
-                        ValueListenableBuilder<bool>(
-                          valueListenable: isContentVisible,
-                          builder: (context, isVisible, child) {
-                            return AnimatedOpacity(
-                              opacity: isVisible ? 1.0 : 0.0,
+              ),
+              // Main Content Area (Adjusts based on navigation bar visibility)
+              Positioned.fill(
+                left: _isNavBarVisible ? 80 : 0, // Adjust based on navbar visibility
+                child: Container(
+                  child: Column(
+                    children: [
+                      // Animated visibility for main page
+                      ValueListenableBuilder<bool>(
+                        valueListenable: isContentVisible, // Assuming this is controlling visibility
+                        builder: (context, isVisible, child) {
+                          return AnimatedOpacity(
+                            opacity: isVisible ? 1.0 : 0.0, // Fade in/out based on visibility
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeInOut,
+                            child: AnimatedSlide(
+                              offset: isVisible ? Offset.zero : const Offset(0, -0.2), // Slide out if not visible
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeInOut,
-                              child: AnimatedSlide(
-                                offset: isVisible ? Offset.zero : const Offset(0, 0.1),
-                                duration: const Duration(milliseconds: 500),
-                                curve: Curves.easeInOut,
-                                child: isVisible ? const mainPage() : const SizedBox(),
-                              ),
-                            );
-                          },
-                        ),
-                        // Display the corresponding page
-                        _pages[_selectedIndex],
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            // Roller button to toggle navigation bar
-            Positioned(
-              left: _isNavBarVisible ? 80 : 0, // Adjust based on nav bar visibility
-              top: mq.height * .2, // Center vertically
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _isNavBarVisible = !_isNavBarVisible; // Toggle visibility of nav bar
-                    _isRollerVisible = !_isRollerVisible; // Hide the roller when clicked
-                  });
-                },
-                child: AnimatedOpacity(
-                  opacity: _isRollerVisible ? 1.0 : 0.0, // Fade in/out the roller button
-                  duration: const Duration(milliseconds: 10), // Animation duration
-                  child: Container(
-                    width: 15,
-                    height: 150,
-                    decoration: const BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
+                              child: isVisible
+                                  ? const mainPage()  // Show the mainPage when visible
+                                  : const SizedBox(), // Hide it when not visible
+                            ),
+                          );
+                        },
                       ),
-                    ), // Roller color
-                    alignment: Alignment.center,
+                      // Display the corresponding page based on selection
+                      _pages[_selectedIndex],
+                    ],
                   ),
                 ),
               ),
+
+            ],
+          ),
+
+          // Roller Button
+          Positioned(
+            left: _isNavBarVisible ? 80 : 0, // Adjust based on nav bar visibility
+            top: mq.height * .2, // Position vertically
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _isNavBarVisible = !_isNavBarVisible; // Toggle visibility of nav bar
+                  _isRollerVisible = !_isRollerVisible; // Hide the roller when clicked
+                });
+              },
+              child: AnimatedOpacity(
+                opacity: _isRollerVisible ? 1.0 : 0.0, // Fade in/out the roller button
+                duration: const Duration(milliseconds: 300),
+                child: Container(
+                  width: 15,
+                  height: 150,
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ), // Roller color
+                  alignment: Alignment.center,
+                ),
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

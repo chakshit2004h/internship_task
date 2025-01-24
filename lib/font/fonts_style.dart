@@ -25,7 +25,7 @@ class AppWidget {
   static TextStyle lightTextStyle(){
     return const TextStyle(
       color: Colors.grey,
-      fontSize: 15,
+      fontSize: 14,
     );
   }
 }
