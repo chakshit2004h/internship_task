@@ -30,7 +30,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_1 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_1 ? mq.height * 0.05 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -38,7 +38,7 @@ class _mainPageState extends State<mainPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.02),
+                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
                     child: Text(
                       "LTE",
                       style: AppWidget.boldTextStyle(),
@@ -51,7 +51,7 @@ class _mainPageState extends State<mainPage> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -60,13 +60,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -75,13 +75,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -90,13 +90,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -105,13 +105,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -120,13 +120,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -135,13 +135,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style:AppWidget.lightTextStyle(),
+                                  style:AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -150,13 +150,13 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -165,7 +165,7 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
@@ -178,7 +178,7 @@ class _mainPageState extends State<mainPage> {
               ),
             ),
           ),
-          Container(height: mq.height*.002,color: Colors.white,),
+          Container(height: mq.height*.001,color: Colors.white,),
           GestureDetector(
             onTap: (){
               setState(() {
@@ -187,7 +187,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_2 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_2 ? mq.height * 0.05 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -195,7 +195,7 @@ class _mainPageState extends State<mainPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.02),
+                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
                     child: Text(
                       "NR",
                       style: AppWidget.boldTextStyle(),
@@ -208,82 +208,82 @@ class _mainPageState extends State<mainPage> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "Band",
+                                  "NR Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "EARFCN",
+                                  "NR ARFCN",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
-                                  "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  "634080",
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "Freq",
+                                  "NR Freq",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
-                                  "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  "3511.2",
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "DL BW",
+                                  "NR DL BW",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "RSRP",
+                                  "NR PCI/SSB",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
-                                  "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  "37/1",
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
@@ -292,37 +292,67 @@ class _mainPageState extends State<mainPage> {
                                 ),
                                 Text(
                                   "--",
-                                  style:AppWidget.lightTextStyle(),
+                                  style:AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "PDSCH",
+                                  "NR SS RSRP",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
-                                  "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  "-104.4",
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "PUSCH",
+                                  "NR SS RSRQ",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
-                                  "--",
+                                  "-10.9",
+                                  style: AppWidget.whiteTextStyle(),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            child: Column(
+                              children: [
+                                Text(
+                                  "NR SS SINR",
                                   style: AppWidget.lightTextStyle(),
+                                ),
+                                Text(
+                                  "9.5",
+                                  style: AppWidget.whiteTextStyle(),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            child: Column(
+                              children: [
+                                Text(
+                                  "NR PDSCH",
+                                  style: AppWidget.lightTextStyle(),
+                                ),
+                                Text(
+                                  "0.004",
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
@@ -335,7 +365,7 @@ class _mainPageState extends State<mainPage> {
               ),
             ),
           ),
-          Container(height: mq.height*.002,color: Colors.white,),
+          Container(height: mq.height*.001,color: Colors.white,),
           GestureDetector(
             onTap: (){
               setState(() {
@@ -344,7 +374,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_3 ? mq.height * 0.06 : mq.height* 0.15,
+              height: isExpanded_3 ? mq.height * 0.05 : mq.height* 0.15,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -352,7 +382,7 @@ class _mainPageState extends State<mainPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.02),
+                    padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
                     child: Text(
                       "NR SCG",
                       style: AppWidget.boldTextStyle(),
@@ -365,121 +395,121 @@ class _mainPageState extends State<mainPage> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "Band",
+                                  "NR Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "EARFCN",
+                                  "NR ARFCN",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style:AppWidget.lightTextStyle(),
+                                  style:AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "Freq",
+                                  "NR Freq",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "DL BW",
+                                  "NR DL BW",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "RSRP",
+                                  "NR PCI/SSB",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "SINR",
+                                  "NR SS RSRP",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "PDSCH",
+                                  "NR SS RSRQ",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 15),
+                            padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: Column(
                               children: [
                                 Text(
-                                  "PUSCH",
+                                  "NR SS SINR",
                                   style: AppWidget.lightTextStyle(),
                                 ),
                                 Text(
                                   "--",
-                                  style:AppWidget.lightTextStyle(),
+                                  style:AppWidget.whiteTextStyle(),
                                 ),
                               ],
                             ),

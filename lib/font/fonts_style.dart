@@ -5,8 +5,13 @@ class AppWidget {
   static TextStyle boldTextStyle(){
     return const TextStyle(
       color: Colors.white,
-      fontSize: 18,
-      fontWeight: FontWeight.bold,
+      fontSize: 15,
+    );
+  }
+  static TextStyle whiteTextStyle(){
+    return const TextStyle(
+      color: Colors.white,
+      fontSize: 12,
     );
   }
   static TextStyle semiboldTextStyle(){
@@ -25,7 +30,7 @@ class AppWidget {
   static TextStyle lightTextStyle(){
     return const TextStyle(
       color: Colors.grey,
-      fontSize: 14,
+      fontSize: 12,
     );
   }
 }

@@ -147,6 +147,32 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
+
+          // Force/Lock Button
+          Positioned(
+            bottom: 30,
+            right: 5,
+            child: GestureDetector(
+              onTap: () {
+                // Add your Force/Lock button logic here
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12), // Add padding for a button-like appearance
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min, // Ensure the button only takes necessary space
+                  children: [
+                    Text(
+                      "FORCE/LOCK",
+                      style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 20,),
+                    Icon(Icons.more_vert,color: Colors.white,)
+                  ],
+                ),
+              ),
+            ),
+          ),
+
         ],
       ),
     );

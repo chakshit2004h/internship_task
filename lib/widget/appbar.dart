@@ -107,41 +107,157 @@ class _CustomAppBarState extends State<CustomAppBar> {
           itemBuilder: (BuildContext context) => [
             const PopupMenuItem(
               value: 'Option 1',
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.arrow_right_outlined,
-                    size: 50,
-                    color: Colors.white,
-                  ),
-                  Text(
-                    "Measurement Start",
+              child: Text(
+                    "Start Script",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                     ),
                   ),
-                ],
-              ),
             ),
             const PopupMenuItem(
               value: 'Option 2',
-              child: Row(
-                children: [
-                  SizedBox(width: 15),
-                  Icon(
-                    Icons.watch_later,
-                    size: 20,
-                    color: Colors.white,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
+              child:Text(
                     "Monitor Start",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                     ),
                   ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 2',
+              child:Text(
+                "Monitor Mode",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 3',
+              child:Text(
+                "End Script",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 4',
+              child:Text(
+                "View Theme",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 5',
+              child:Text(
+                "Take Screenshot",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 6',
+              child:Text(
+                "Add Photo",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 7',
+              child:Text(
+                "Take Photo",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 7',
+              child:Text(
+                "Mute/Unmute",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 7',
+              child:Text(
+                "Pause Recording",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 8',
+              child:Text(
+                "Add Tag",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 9',
+              child:Text(
+                "Split Tag",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 10',
+              child:Text(
+                "Reset Modem",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 11',
+              child:Text(
+                "Skip item by Airplane Mode",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'Option 11',
+              child:Row(
+                children: [
+                  Text(
+                    "VoNR Enable/Disable",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+                  Icon(Icons.check_box_outline_blank,color: Colors.white,)
                 ],
               ),
             ),

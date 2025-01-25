@@ -42,7 +42,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
             child: Container(
               width: 5, // Slim vertical strip
               height: 70, // Same height as the navigation item
-              color: Colors.grey, // Roller color
+              color: Colors.orangeAccent, // Roller color
             ),
           ),
         ],
@@ -70,13 +70,13 @@ class _NavigationBarState extends State<Navigation_Bar> {
             Icon(
               icon,
               size: 32, // Bigger icon size
-              color: isSelected ? Colors.blue : Colors.white, // Change icon color on selection
+              color: isSelected ? Colors.white : Colors.grey, // Change icon color on selection
             ),
             const SizedBox(height: 8), // Space between icon and text
             Text(
               label,
               style: TextStyle(
-                color: isSelected ? Colors.blue : Colors.white, // Change text color on selection
+                color: isSelected ? Colors.white : Colors.grey, // Change text color on selection
                 fontSize: 12,
               ),
               textAlign: TextAlign.center,
