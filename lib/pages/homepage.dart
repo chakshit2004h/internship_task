@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:internship/pages/text_page.dart';
 import 'package:internship/widget/appbar.dart';
+import '../font/fonts_style.dart';
 import '../main.dart';
+import '../widget/bottomSheet.dart';
 import '../widget/navigation_bar.dart';
 import '../widget/value_container.dart';
 
@@ -147,10 +149,49 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
-
+          Positioned(
+            bottom: 50,
+            left: _isNavBarVisible ? 80 : 0, // Adjust the left position dynamically
+            child: GestureDetector(
+              onTap: (){
+                BottomSheetPicker.show(context);
+              },
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300), // Smooth resizing animation
+                width: _isNavBarVisible ? mq.width - 80 : mq.width, // Adjust width dynamically
+                height: mq.height * .08, // Maintain a slightly larger height for text
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4), // Add padding for text
+                color: Colors.black26,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start, // Align text to the start
+                  children: [
+                    Text(
+                      "Ping[www.google.com][pktSize = 16][interval = 0.2]",
+                      style: TextStyle(
+                        fontSize: _isNavBarVisible ? 15 : 18,
+                        color: Colors.white,
+                        overflow: TextOverflow.ellipsis, // Prevent text overflow
+                      ),
+                      maxLines: 1, // Limit to a single line
+                    ),
+                    const SizedBox(height: 4), // Add space between texts
+                    Text(
+                      "executing...",
+                      style: TextStyle(
+                        fontSize: _isNavBarVisible ? 13 : 15,
+                        color: Colors.grey,
+                        overflow: TextOverflow.ellipsis, // Prevent text overflow
+                      ),
+                      maxLines: 1, // Limit to a single line
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           // Force/Lock Button
           Positioned(
-            bottom: 30,
+            bottom: 10,
             right: 5,
             child: GestureDetector(
               onTap: () {
