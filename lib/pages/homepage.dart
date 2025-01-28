@@ -154,7 +154,13 @@ class _HomepageState extends State<Homepage> {
             bottom: 50,
             left: _isNavBarVisible ? 80 : 0, // Adjust the left position dynamically
             child: GestureDetector(
-              onVerticalDragStart: (details){
+              onVerticalDragEnd: (details) {
+                // Check if the user is dragging upwards (negative primaryVelocity)
+                if (details.primaryVelocity! < 0) {
+                  BottomSheetPicker_2.show(context); // Show the bottom sheet when dragged upwards
+                }
+              },
+              onTap: (){
                 BottomSheetPicker_2.show(context);
               },
               child: AnimatedContainer(
