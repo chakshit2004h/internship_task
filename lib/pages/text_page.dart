@@ -10,6 +10,6 @@ class TextPage extends StatefulWidget {
 class _TextPageState extends State<TextPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container();
   }
 }

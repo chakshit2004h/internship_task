@@ -18,8 +18,7 @@ class _mainPageState extends State<mainPage> {
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return AnimatedContainer(
-      height: 800,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       child: Column(
         children: [
           GestureDetector(
@@ -30,7 +29,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_1 ? mq.height * 0.05 : mq.height* 0.15,
+              height: isExpanded_1 ? mq.height * 0.07 : mq.height* 0.16,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -42,7 +41,7 @@ class _mainPageState extends State<mainPage> {
                     child: Center(
                       child: Text(
                         "LTE",
-                        style: AppWidget.boldTextStyle(),
+                        style: AppWidget.lightTextStyle().copyWith(color: Colors.white),
                       ),
                     ),
                   ),
@@ -64,13 +63,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -89,13 +84,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -114,13 +105,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -139,13 +126,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -164,13 +147,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -189,13 +168,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -214,13 +189,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -239,13 +210,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -260,7 +227,7 @@ class _mainPageState extends State<mainPage> {
               ),
             ),
           ),
-          Container(height: mq.height*.001,color: Colors.white,),
+          Container(height: mq.height*.001,color:  Colors.white,),
           GestureDetector(
             onTap: (){
               setState(() {
@@ -269,7 +236,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_2 ? mq.height * 0.05 : mq.height* 0.15,
+              height: isExpanded_2 ? mq.height * 0.07 : mq.height* 0.16,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -281,7 +248,7 @@ class _mainPageState extends State<mainPage> {
                     child: Center(
                       child: Text(
                         "NR",
-                        style: AppWidget.boldTextStyle(),
+                        style: AppWidget.lightTextStyle().copyWith(color: Colors.white),
                       ),
                     ),
                   ),
@@ -303,13 +270,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -328,13 +291,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("634080")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("634080"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -353,13 +312,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("3511.4")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("3511.4"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -378,13 +333,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("0.004")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("0.004"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -403,13 +354,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("37/1")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("37/1"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -428,13 +375,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -453,13 +396,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("-104.4")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("-104.4"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -478,13 +417,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("-10.9")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("-10.9"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -503,13 +438,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("9.5")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("9.5"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -528,13 +459,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("0.004")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("0.004"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -558,7 +485,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_3 ? mq.height * 0.05 : mq.height* 0.15,
+              height: isExpanded_3 ? mq.height * 0.07 : mq.height* 0.16,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -570,7 +497,7 @@ class _mainPageState extends State<mainPage> {
                     child: Center(
                       child: Text(
                         "NR SCG",
-                        style: AppWidget.boldTextStyle(),
+                        style: AppWidget.lightTextStyle().copyWith(color: Colors.white),
                       ),
                     ),
                   ),
@@ -592,13 +519,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -617,13 +540,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -642,13 +561,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -667,13 +582,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -692,13 +603,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -717,13 +624,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -742,13 +645,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -767,13 +666,9 @@ class _mainPageState extends State<mainPage> {
                                     ? buildItem("--")
                                     :Column(
                                   children: [
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
-                                    const SizedBox(height: 5,),
                                     buildItem("--"),
                                   ],
                                 ),
@@ -788,7 +683,6 @@ class _mainPageState extends State<mainPage> {
               ),
             ),
           ),
-          Container(height: mq.height*.001,color: Colors.white,),
         ],
       ),
     );

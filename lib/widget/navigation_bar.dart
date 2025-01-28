@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/font/fonts_style.dart';
 
 // Navigation Bar widget
 class Navigation_Bar extends StatefulWidget {
@@ -15,29 +16,27 @@ class _NavigationBarState extends State<Navigation_Bar> {
 
   // List of items in the navigation bar
   final List<Map<String, dynamic>> navItems = [
-    {'icon': Icons.dashboard, 'label': 'Dashboard'},
+    {'icon': Icons.dashboard, 'label': 'Scripts'},
     {'icon': Icons.home, 'label': 'Home'},
+    {'icon': Icons.table_view_sharp, 'label': 'RLF'},
     {'icon': Icons.cell_tower, 'label': 'Cell'},
     {'icon': Icons.area_chart_sharp, 'label': 'Charts'},
     {'icon': Icons.table_bar_sharp, 'label': 'RF1'},
     {'icon': Icons.table_rows, 'label': 'Rach'},
-    {'icon': Icons.table_view_sharp, 'label': 'RLF'},
     {'icon': Icons.network_cell, 'label': '5G NR'},
     {'icon': Icons.radar, 'label': 'Beam'},
     {'icon': Icons.output, 'label': 'Throughput'},
     {'icon': Icons.width_wide, 'label': 'Spectrum'},
     {'icon': Icons.settings_input_antenna, 'label': 'Throughput'},
     {'icon': Icons.single_bed, 'label': 'Signaling'},
-    {'icon': Icons.map, 'label': 'Map'},
-    {'icon': Icons.person, 'label': 'Profile'},
-    {'icon': Icons.settings, 'label': 'Settings'},
+    {'icon': Icons.map, 'label': 'Map'}
   ];
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        width: 84, // Navigation bar width
+        width: 100, // Navigation bar width
         color: Colors.black,
         child: Stack(
           children: [
@@ -52,16 +51,6 @@ class _NavigationBarState extends State<Navigation_Bar> {
               ),
             ),
             // Roller indicator
-            AnimatedPositioned(
-              duration: const Duration(milliseconds: 300),
-              top: _selectedIndex * 70.0, // Position based on selected index
-              left: 75, // Align with the right side of the nav bar
-              child: Container(
-                width: 5, // Slim vertical strip
-                height: 70, // Same height as the navigation item
-                color: Colors.orangeAccent, // Roller color
-              ),
-            ),
           ],
         ),
       ),
@@ -79,25 +68,35 @@ class _NavigationBarState extends State<Navigation_Bar> {
         widget.onPageSelected(index); // Notify parent about page change
       },
       child: Container(
-        height: 70, // Ensure the height matches the roller height
+        height: 60, // Ensure the height matches the roller height
         color: Colors.black, // Background color
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 32, // Bigger icon size
-              color: isSelected ? Colors.white : Colors.grey, // Change icon color on selection
-            ),
-            const SizedBox(height: 8), // Space between icon and text
-            Text(
-              label,
-              style: TextStyle(
-                color: isSelected ? Colors.white : Colors.grey, // Change text color on selection
-                fontSize: 12,
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    icon,
+                    size: 24, // Bigger icon size
+                    color: isSelected ? Colors.white : Colors.grey, // Change icon color on selection
+                  ),
+                  const SizedBox(height: 5), // Space between icon and text
+                  Text(
+                    label,
+                    style: AppWidget.lightTextStyle().copyWith(color: isSelected ? Colors.white : Colors.grey),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              textAlign: TextAlign.center,
+            ),
+            if(isSelected)
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              width: 3, // Same height as the navigation item
+              color: Colors.orangeAccent, // Roller color
             ),
           ],
         ),

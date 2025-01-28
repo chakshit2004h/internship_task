@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../font/fonts_style.dart';
 import '../main.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
@@ -30,29 +31,25 @@ class _CustomAppBarState extends State<CustomAppBar> {
         icon: const Icon(
           Icons.menu,
           color: Colors.white,
-          size: 30,
+          size: 24,
         ),
       ),
       title: Row(
         mainAxisSize: MainAxisSize.min, // Ensures the row takes minimal space.
         children: [
-          const Text(
+          Text(
             "SCRIPTS",
-            style: TextStyle(
-              color: Colors.orangeAccent,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            style: AppWidget.boldTextStyle().copyWith(color: Colors.orangeAccent,fontSize: 16,fontWeight: FontWeight.bold),
           ),
-          const SizedBox(width: 80),
+          Spacer(),
           PopupMenuButton<String>(
             color: Colors.black87,
             icon: const Icon(
               Icons.arrow_drop_down_sharp,
               color: Colors.white,
-              size: 30,
+              size: 24,
             ),
-            offset: const Offset(-172, 0), // Adjust position of the popup menu.
+            offset: const Offset(-100, 0), // Adjust position of the popup menu.
             onSelected: (value) {
               // Handle selection logic if needed.
             },
@@ -79,7 +76,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               icon: Icon(
                 isVisible ? Icons.visibility : Icons.visibility_off,
                 color: Colors.white,
-                size: 35,
+                size: 24,
               ),
             );
           },
@@ -91,7 +88,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           icon: const Icon(
             Icons.edit,
             color: Colors.white,
-            size: 35,
+            size: 24,
           ),
         ),
         PopupMenuButton<String>(
@@ -99,7 +96,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           icon: const Icon(
             Icons.more_vert,
             color: Colors.white,
-            size: 30,
+            size: 24,
           ),
           onSelected: (value) {
             // Handle selection logic if needed.
