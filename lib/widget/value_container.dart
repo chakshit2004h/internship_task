@@ -18,7 +18,7 @@ class _mainPageState extends State<mainPage> {
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return AnimatedContainer(
-      height: 500,
+      height: 800,
       duration: Duration(milliseconds: 300),
       child: Column(
         children: [
@@ -39,9 +39,11 @@ class _mainPageState extends State<mainPage> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
-                    child: Text(
-                      "LTE",
-                      style: AppWidget.boldTextStyle(),
+                    child: Center(
+                      child: Text(
+                        "LTE",
+                        style: AppWidget.boldTextStyle(),
+                      ),
                     ),
                   ),
                   // Wrap the columns in a horizontally scrollable view
@@ -58,9 +60,19 @@ class _mainPageState extends State<mainPage> {
                                   "Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -73,9 +85,19 @@ class _mainPageState extends State<mainPage> {
                                   "EARFCN",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -88,9 +110,19 @@ class _mainPageState extends State<mainPage> {
                                   "Freq",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -103,9 +135,19 @@ class _mainPageState extends State<mainPage> {
                                   "DL BW",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -118,9 +160,19 @@ class _mainPageState extends State<mainPage> {
                                   "RSRP",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -133,9 +185,19 @@ class _mainPageState extends State<mainPage> {
                                   "SINR",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style:AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -148,9 +210,19 @@ class _mainPageState extends State<mainPage> {
                                   "PDSCH",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -163,9 +235,19 @@ class _mainPageState extends State<mainPage> {
                                   "PUSCH",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_1
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -196,9 +278,11 @@ class _mainPageState extends State<mainPage> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
-                    child: Text(
-                      "NR",
-                      style: AppWidget.boldTextStyle(),
+                    child: Center(
+                      child: Text(
+                        "NR",
+                        style: AppWidget.boldTextStyle(),
+                      ),
                     ),
                   ),
                   // Wrap the columns in a horizontally scrollable view
@@ -215,9 +299,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -230,9 +324,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR ARFCN",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "634080",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("634080")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("634080"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -245,9 +349,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR Freq",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "3511.2",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("3511.4")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("3511.4"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -260,9 +374,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR DL BW",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("0.004")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("0.004"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -275,9 +399,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR PCI/SSB",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "37/1",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("37/1")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("37/1"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -290,9 +424,19 @@ class _mainPageState extends State<mainPage> {
                                   "SINR",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style:AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -305,9 +449,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS RSRP",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "-104.4",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("-104.4")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("-104.4"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -320,9 +474,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS RSRQ",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "-10.9",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("-10.9")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("-10.9"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -335,9 +499,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS SINR",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "9.5",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("9.5")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("9.5"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -350,9 +524,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR PDSCH",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "0.004",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_2
+                                    ? buildItem("0.004")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("0.004"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -383,9 +567,11 @@ class _mainPageState extends State<mainPage> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: mq.height * 0.01),
-                    child: Text(
-                      "NR SCG",
-                      style: AppWidget.boldTextStyle(),
+                    child: Center(
+                      child: Text(
+                        "NR SCG",
+                        style: AppWidget.boldTextStyle(),
+                      ),
                     ),
                   ),
                   // Wrap the columns in a horizontally scrollable view
@@ -402,9 +588,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR Band",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -417,9 +613,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR ARFCN",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style:AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -432,9 +638,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR Freq",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -447,9 +663,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR DL BW",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -462,9 +688,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR PCI/SSB",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -477,9 +713,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS RSRP",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -492,9 +738,19 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS RSRQ",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style: AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
@@ -507,13 +763,23 @@ class _mainPageState extends State<mainPage> {
                                   "NR SS SINR",
                                   style: AppWidget.lightTextStyle(),
                                 ),
-                                Text(
-                                  "--",
-                                  style:AppWidget.whiteTextStyle(),
+                                isExpanded_3
+                                    ? buildItem("--")
+                                    :Column(
+                                  children: [
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                    const SizedBox(height: 5,),
+                                    buildItem("--"),
+                                  ],
                                 ),
                               ],
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -522,9 +788,12 @@ class _mainPageState extends State<mainPage> {
               ),
             ),
           ),
-          Container(height: mq.height*.002,color: Colors.white,),
+          Container(height: mq.height*.001,color: Colors.white,),
         ],
       ),
     );
+  }
+  Widget buildItem(String val){
+    return Text("${val}",style: AppWidget.whiteTextStyle(),);
   }
 }

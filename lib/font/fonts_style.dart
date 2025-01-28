@@ -5,7 +5,7 @@ class AppWidget {
   static TextStyle boldTextStyle(){
     return const TextStyle(
       color: Colors.white,
-      fontSize: 15,
+      fontSize: 12,
     );
   }
   static TextStyle whiteTextStyle(){

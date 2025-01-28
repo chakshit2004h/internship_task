@@ -3,7 +3,8 @@ import 'package:internship/pages/text_page.dart';
 import 'package:internship/widget/appbar.dart';
 import '../font/fonts_style.dart';
 import '../main.dart';
-import '../widget/bottomSheet.dart';
+import '../widget/bottomSheet1.dart';
+import '../widget/bottomSheet2.dart';
 import '../widget/navigation_bar.dart';
 import '../widget/value_container.dart';
 
@@ -153,8 +154,8 @@ class _HomepageState extends State<Homepage> {
             bottom: 50,
             left: _isNavBarVisible ? 80 : 0, // Adjust the left position dynamically
             child: GestureDetector(
-              onTap: (){
-                BottomSheetPicker.show(context);
+              onVerticalDragStart: (details){
+                BottomSheetPicker_2.show(context);
               },
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 300), // Smooth resizing animation
@@ -194,22 +195,16 @@ class _HomepageState extends State<Homepage> {
             bottom: 10,
             right: 5,
             child: GestureDetector(
-              onTap: () {
-                // Add your Force/Lock button logic here
+              onTap: (){
+                BottomSheetPicker_1.show(context);
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12), // Add padding for a button-like appearance
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min, // Ensure the button only takes necessary space
-                  children: [
-                    Text(
+                child: const Text(
                       "FORCE/LOCK",
                       style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(width: 20,),
-                    Icon(Icons.more_vert,color: Colors.white,)
-                  ],
-                ),
+
               ),
             ),
           ),
