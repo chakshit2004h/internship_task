@@ -18,7 +18,7 @@ class _NavigationBarState extends State<Navigation_Bar> {
   final List<Map<String, dynamic>> navItems = [
     {'icon': Icons.dashboard, 'label': 'Scripts'},
     {'icon': Icons.home, 'label': 'Home'},
-    {'icon': Icons.table_view_sharp, 'label': 'RLF'},
+    {'icon': Icons.table_view_sharp, 'label': 'RF1'},
     {'icon': Icons.cell_tower, 'label': 'Cell'},
     {'icon': Icons.area_chart_sharp, 'label': 'Charts'},
     {'icon': Icons.table_bar_sharp, 'label': 'RF1'},
