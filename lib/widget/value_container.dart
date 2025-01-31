@@ -29,7 +29,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_1 ? mq.height * 0.07 : mq.height* 0.16,
+              height: isExpanded_1 ? mq.height * 0.05 : mq.height* 0.12,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -41,7 +41,7 @@ class _mainPageState extends State<mainPage> {
                     child: Center(
                       child: Text(
                         "LTE",
-                        style: AppWidget.lightTextStyle().copyWith(color: Colors.white),
+                        style: AppWidget.lightTextStyle().copyWith(color: Colors.white,fontSize: 10),
                       ),
                     ),
                   ),
@@ -57,7 +57,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "Band",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -78,7 +78,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "EARFCN",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -99,7 +99,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "Freq",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -120,7 +120,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "DL BW",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -141,7 +141,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "RSRP",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -162,7 +162,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "SINR",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -183,7 +183,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "PDSCH",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -204,7 +204,7 @@ class _mainPageState extends State<mainPage> {
                               children: [
                                 Text(
                                   "PUSCH",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_1
                                     ? buildItem("--")
@@ -236,7 +236,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_2 ? mq.height * 0.07 : mq.height* 0.16,
+              height: isExpanded_2 ? mq.height * 0.05 : mq.height* 0.12,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -259,12 +259,12 @@ class _mainPageState extends State<mainPage> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR Band",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("--")
@@ -280,12 +280,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR ARFCN",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("634080")
@@ -301,12 +301,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR Freq",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("3511.4")
@@ -322,12 +322,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR DL BW",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("0.004")
@@ -343,12 +343,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR PCI/SSB",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("37/1")
@@ -364,12 +364,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "SINR",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("--")
@@ -385,12 +385,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS RSRP",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("-104.4")
@@ -406,12 +406,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS RSRQ",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("-10.9")
@@ -427,12 +427,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS SINR",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("9.5")
@@ -448,12 +448,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR PDSCH",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_2
                                     ? buildItem("0.004")
@@ -485,7 +485,7 @@ class _mainPageState extends State<mainPage> {
             },
             child: AnimatedContainer(
               width: double.infinity,
-              height: isExpanded_3 ? mq.height * 0.07 : mq.height* 0.16,
+              height: isExpanded_3 ? mq.height * 0.05 : mq.height* 0.12,
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeInOut,
               child: Row(
@@ -508,12 +508,12 @@ class _mainPageState extends State<mainPage> {
                       child: Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR Band",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -529,12 +529,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR ARFCN",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -550,12 +550,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR Freq",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -571,12 +571,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR DL BW",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -592,12 +592,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR PCI/SSB",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -613,12 +613,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS RSRP",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -634,12 +634,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS RSRQ",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")
@@ -655,12 +655,12 @@ class _mainPageState extends State<mainPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(left: 30.0, top: 10),
+                            padding: EdgeInsets.only(left: 30.0, top: 5),
                             child: Column(
                               children: [
                                 Text(
                                   "NR SS SINR",
-                                  style: AppWidget.lightTextStyle(),
+                                  style: AppWidget.lightTextStyle().copyWith(fontSize: 10),
                                 ),
                                 isExpanded_3
                                     ? buildItem("--")

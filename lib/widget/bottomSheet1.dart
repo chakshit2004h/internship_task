@@ -50,8 +50,7 @@ class BottomSheetPicker_1 {
       'OFF'
     ]; // List of values for editing or off state
 
-    showModalBottomSheet(
-      isScrollControlled: true, // Allow full-screen height
+    showModalBottomSheet(// Allow full-screen height
       backgroundColor: Colors.grey[200],
       context: context,
       shape: const RoundedRectangleBorder(
@@ -62,13 +61,13 @@ class BottomSheetPicker_1 {
           color: Colors.black87,
           height: MediaQuery.of(context).size.height * 0.95, // 95% of screen height
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 12.0),
+            padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 1.0),
             child: Column(
               children: [
                 Container(
                   width: 40,
                   height: 4,
-                  margin: const EdgeInsets.only(bottom: 16.0),
+                  margin: const EdgeInsets.only(bottom: 1.0),
                   decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(10),
@@ -84,8 +83,8 @@ class BottomSheetPicker_1 {
                         leading: Material(
                           elevation: 10,
                           child: Container(
-                            width: 80,
-                            height: 50,
+                            width: 40,
+                            height: 30,
                             decoration: BoxDecoration(
                               color: isDisabled ? Colors.grey : Colors.black54,
                             ),
@@ -94,7 +93,7 @@ class BottomSheetPicker_1 {
                                 val[index],
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 10,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -103,13 +102,13 @@ class BottomSheetPicker_1 {
                         ),
                         title: Text(
                           options[index],
-                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                          style: const TextStyle(fontSize: 12, color: Colors.white),
                         ),
                         subtitle: subtitles[index].isNotEmpty
                             ? Text(
                           subtitles[index],
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 10,
                             color: Colors.grey,
                           ),
                         )
@@ -120,7 +119,6 @@ class BottomSheetPicker_1 {
                           // Perform your action here
                           Navigator.pop(context); // Close the BottomSheet after selection
                         },
-                        contentPadding: EdgeInsets.symmetric(vertical: 8),
                       );
                     },
                   ),

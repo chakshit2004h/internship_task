@@ -49,7 +49,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
               color: Colors.white,
               size: 24,
             ),
-            offset: const Offset(-100, 0), // Adjust position of the popup menu.
+            offset: const Offset(-120, 0), // Adjust position of the popup menu.
             onSelected: (value) {
               // Handle selection logic if needed.
             },
@@ -272,7 +272,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
         text,
         style: const TextStyle(
           color: Colors.orangeAccent,
-          fontSize: 20,
+          fontSize: 12,
           fontWeight: FontWeight.bold,
         ),
       ),
