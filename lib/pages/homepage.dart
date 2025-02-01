@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/pages/5G_NR.dart';
 import 'package:internship/pages/rlf.dart';
 import 'package:internship/pages/text_page.dart';
 import 'package:internship/widget/appbar.dart';
@@ -27,6 +28,7 @@ class _HomepageState extends State<Homepage> {
     const Center(child: Text('Dashboard')),
     const TextPage(),
     const Rlf(),
+    const NR_5G(),
   ];
 
   @override
@@ -49,25 +51,28 @@ class _HomepageState extends State<Homepage> {
             },
             child: Container(
               color: Colors.grey[900],
-              child: Column(
-                children: [
-                  Expanded(
-                    child: ValueListenableBuilder<bool>(
-                      valueListenable: isContentVisible,
-                      builder: (context, isVisible, child) {
-                        return Column(
-                          children: [
-                            if (isVisible) const mainPage(),
-                            if (_selectedIndex == 2 && isVisible)
-                              const Expanded(child: Rlf()), // Show below mainPage
-                            if (_selectedIndex != 2 || !isVisible)
-                              Expanded(child: _pages[_selectedIndex]), // Take full screen if not Rlf
-                          ],
-                        );
-                      },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: ValueListenableBuilder<bool>(
+                        valueListenable: isContentVisible,
+                        builder: (context, isVisible, child) {
+                          return Column(
+                            children: [
+                              if (isVisible) const mainPage(),
+                              if (_selectedIndex == 2 && isVisible)
+                                const Expanded(child: Rlf()), // Show below mainPage
+                              if (_selectedIndex != 2 || !isVisible)
+                                Expanded(child: _pages[_selectedIndex]), // Take full screen if not Rlf
+                            ],
+                          );
+                        },
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

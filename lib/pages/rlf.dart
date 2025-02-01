@@ -112,13 +112,13 @@ class _RlfState extends State<Rlf> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text("TxAnt", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
-                      const SizedBox(width: 30,),
+                      const SizedBox(width: 25,),
                       Text("Rx Ant", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
-                      const SizedBox(width: 30,),
+                      const SizedBox(width: 25,),
                       Text("MIMO", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
-                      const SizedBox(width: 30,),
+                      const SizedBox(width: 25,),
                       Text("SRS Tx Power", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
-                      const SizedBox(width: 30,),
+                      const SizedBox(width: 25,),
                     ],
                   ),
                 ],
@@ -155,7 +155,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -433,7 +433,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -472,7 +472,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -554,7 +554,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -593,7 +593,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -675,7 +675,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -945,7 +945,7 @@ class _RlfState extends State<Rlf> {
                       Text("SCell4", style: AppWidget.whiteTextStyle().copyWith(fontSize: 10)),
                     ],
                   ),
-                  const SizedBox(width: 40,),
+                  const SizedBox(width: 25,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
