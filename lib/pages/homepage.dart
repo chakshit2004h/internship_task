@@ -7,10 +7,16 @@ import '../font/fonts_style.dart';
 import '../main.dart';
 import '../widget/bottomSheet1.dart';
 import '../widget/bottomSheet2.dart';
+import '../widget/navDrawer.dart';
 import '../widget/navigation_bar.dart';
 import '../widget/value_container.dart';
 
+
+
 class Homepage extends StatefulWidget {
+  static final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
   const Homepage({super.key});
 
   @override
@@ -36,6 +42,9 @@ class _HomepageState extends State<Homepage> {
     mq = MediaQuery.of(context).size;
 
     return Scaffold(
+      key: Homepage.scaffoldKey,
+      drawer: drawer(),
+      drawerEnableOpenDragGesture: false,
       backgroundColor: Colors.transparent,
       appBar: const CustomAppBar(),
       body: Stack(
@@ -52,7 +61,7 @@ class _HomepageState extends State<Homepage> {
             child: Container(
               color: Colors.grey[900],
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(left: _isNavBarVisible ? 70 : 0),
                 child: Column(
                   children: [
                     Expanded(
@@ -110,6 +119,7 @@ class _HomepageState extends State<Homepage> {
                 } else if (details.delta.dx > 10) {
                   setState(() {
                     _isNavBarVisible = true;
+                    _isRollerVisible = false;
                   });
                 }
               },

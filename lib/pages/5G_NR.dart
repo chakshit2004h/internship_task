@@ -20,7 +20,7 @@ class _NR_5GState extends State<NR_5G> {
           width: double.infinity,
           color: Colors.black87,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

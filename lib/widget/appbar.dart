@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/pages/homepage.dart';
 
 import '../font/fonts_style.dart';
 import '../main.dart';
@@ -15,6 +16,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 
 class _CustomAppBarState extends State<CustomAppBar> {
   bool _isVisible = true;
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   void _toggleContainer() {
     setState(() {
@@ -27,7 +29,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return AppBar(
       backgroundColor: Colors.black,
       leading: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          Homepage.scaffoldKey.currentState?.openDrawer();
+        },
         icon: const Icon(
           Icons.menu,
           color: Colors.white,
