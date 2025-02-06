@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../font/fonts_style.dart';
+import '../pages/script_file.dart'; // Import the new page
 
 class drawer extends StatefulWidget {
   const drawer({super.key});
@@ -16,9 +16,9 @@ class _DrawerWidgetState extends State<drawer> {
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.only(top: 50.0), // Adjust this to align above the icon
+      padding: const EdgeInsets.only(top: 50.0),
       child: Container(
-        width: mq.width * 0.7, // Adjust width if needed
+        width: mq.width * 0.7,
         decoration: const BoxDecoration(
           color: Colors.black87,
           borderRadius: BorderRadius.only(
@@ -26,11 +26,10 @@ class _DrawerWidgetState extends State<drawer> {
             bottomLeft: Radius.circular(16),
           ),
         ),
-        child: SingleChildScrollView( // Enable scrolling
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header Section
               const DrawerHeader(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,11 +42,26 @@ class _DrawerWidgetState extends State<drawer> {
                   ],
                 ),
               ),
-              // Expandable Menu Section
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: _drawerItems(),
-              ),
+              _drawerButton(Icons.not_started_rounded, "Start Script"),
+              _drawerButton(Icons.list, "Start Script Set"),
+              _drawerButton(Icons.network_cell, "Network Monitor"),
+              _drawerButton(Icons.date_range_outlined, "Start Schedule"),
+              _drawerButton(Icons.edit, "New Script"),
+              _drawerButton(Icons.folder, "Open Script"),
+              _drawerButton(Icons.manage_search_outlined, "Manage Script Set"),
+              _drawerButton(Icons.share, "Share Script"),
+              _drawerButton(Icons.delete, "Delete Script"),
+              _drawerButton(Icons.settings, "Settings"),
+              _drawerButton(Icons.upload, "Upload Logs"),
+              _drawerButton(Icons.file_copy_outlined, "Manage Logs"),
+              _drawerButton(Icons.bluetooth_audio, "Use Bluetooth Commander"),
+              _drawerButton(Icons.video_call, "How To Video & FAQ"),
+              _drawerButton(Icons.question_mark_outlined, "Email Support"),
+              _drawerButton(Icons.emergency, "About"),
+              _drawerButton(Icons.bug_report, "Logcat Manager"),
+              _drawerButton(Icons.border_style_sharp, "Connect to BOSS"),
+              _drawerButton(Icons.dashboard_outlined, "Open Dashboard"),
+              _drawerButton(Icons.call, "Test Call Recorder"),
             ],
           ),
         ),
@@ -55,44 +69,31 @@ class _DrawerWidgetState extends State<drawer> {
     );
   }
 
-  /// Drawer items to keep the code clean
-  List<Widget> _drawerItems() {
-    List<Map<String, dynamic>> menuItems = [
-      {"icon": Icons.not_started_rounded, "title": "Start Script"},
-      {"icon": Icons.list, "title": "Start Script Set"},
-      {"icon": Icons.network_cell, "title": "Network Monitor"},
-      {"icon": Icons.date_range_outlined, "title": "Start Schedule"},
-      {"icon": Icons.edit, "title": "New Script"},
-      {"icon": Icons.folder, "title": "Open Script"},
-      {"icon": Icons.manage_search_outlined, "title": "Manage Script Set"},
-      {"icon": Icons.share, "title": "Share Script"},
-      {"icon": Icons.delete, "title": "Delete Script"},
-      {"icon": Icons.settings, "title": "Settings"},
-      {"icon": Icons.upload, "title": "Upload Logs"},
-      {"icon": Icons.file_copy_outlined, "title": "Manage Logs"},
-      {"icon": Icons.bluetooth_audio, "title": "Use Bluetooth Commander"},
-      {"icon": Icons.video_call, "title": "How To Video & FAQ"},
-      {"icon": Icons.question_mark_outlined, "title": "Email Support"},
-      {"icon": Icons.emergency, "title": "About"},
-      {"icon": Icons.bug_report, "title": "Logcat Manager"},
-      {"icon": Icons.border_style_sharp, "title": "Connect to BOSS"},
-      {"icon": Icons.dashboard_outlined, "title": "Open Dashboard"},
-      {"icon": Icons.call, "title": "Test Call Recorder"},
-    ];
-
-    return menuItems
-        .map((item) => Padding(
-      padding: const EdgeInsets.only(left: 20.0, top: 15.0),
-      child: Row(
-        children: [
-          Icon(item["icon"], color: Colors.grey, size: 20),
-          const SizedBox(width: 20),
-          Text(item["title"],
-              style: AppWidget.whiteTextStyle()
-                  .copyWith(fontSize: 15, color: Colors.grey)),
-        ],
+  Widget _drawerButton(IconData icon, String title) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+      child: TextButton(
+        onPressed: () => _onDrawerItemTap(title),
+        child: Row(
+          children: [
+            Icon(icon, color: Colors.grey, size: 20),
+            const SizedBox(width: 15),
+            Text(title,
+                style: AppWidget.whiteTextStyle()
+                    .copyWith(fontSize: 15, color: Colors.grey)),
+          ],
+        ),
       ),
-    ))
-        .toList();
+    );
+  }
+
+  void _onDrawerItemTap(String title) {
+    print("$title clicked");
+    if (title == "New Script") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ScriptFile()),
+      );
+    }
   }
 }
