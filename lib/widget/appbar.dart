@@ -119,16 +119,6 @@ class _CustomAppBarState extends State<CustomAppBar> {
             const PopupMenuItem(
               value: 'Option 2',
               child:Text(
-                    "Monitor Start",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-            ),
-            const PopupMenuItem(
-              value: 'Option 2',
-              child:Text(
                 "Monitor Mode",
                 style: TextStyle(
                   color: Colors.white,
