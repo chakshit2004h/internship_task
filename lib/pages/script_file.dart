@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/pages/ping.dart';
 
 class ScriptFile extends StatefulWidget {
   const ScriptFile({super.key});
@@ -11,6 +12,9 @@ class _ScriptFileState extends State<ScriptFile> {
   final TextEditingController _searchController = TextEditingController();
   final TextEditingController _filenameController = TextEditingController();
   List<String> menuItems = [
+    "Ping",
+    "Loop",
+    "Pause",
     "Tcpdump Record",
     "Require Cell File",
     "LINE Send",
@@ -234,8 +238,8 @@ class _ScriptFileState extends State<ScriptFile> {
   Widget _buildMenuItem(String title) {
     return InkWell(
       onTap: () {
-        Navigator.pop(context); // Close the dialog on selection
-        print("$title selected");
+        Navigator.pop(context); // Close the dialog
+        _navigateToPage(title);
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12.0),
@@ -246,4 +250,32 @@ class _ScriptFileState extends State<ScriptFile> {
       ),
     );
   }
+
+  void _navigateToPage(String title) {
+    Map<String, Widget> pages = {
+      "Ping": Ping(),
+      // "Loop": LoopPage(),
+      // "Pause": PausePage(),
+      // "Tcpdump Record": TcpdumpPage(),
+      // "Require Cell File": RequireCellFilePage(),
+      // "LINE Send": LineSendPage(),
+      // "Instagram Download Photo": InstagramDownloadPage(),
+      // "Wait until SQL criteria/threshold": SQLWaitPage(),
+      // "New Sector Tag": NewSectorTagPage(),
+      // "LTE EARFCN Lock disable": LTEEarFcnLockPage(),
+      // "LINE Clear History": LineClearHistoryPage(),
+      // "OTT Video Streaming MOS": OTTVideoStreamingPage(),
+      // "Voice + FTP Upload": VoiceFTPUploadPage(),
+    };
+
+    if (pages.containsKey(title)) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => pages[title]!),
+      );
+    } else {
+      print("No page found for $title");
+    }
+  }
+
 }
