@@ -158,8 +158,8 @@ class _HomepageState extends State<Homepage> {
                   opacity: _isRollerVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 300),
                   child: Container(
-                    width: 10,
-                    height: 100,
+                    width: 14,
+                    height: 120,
                     decoration: const BoxDecoration(
                       color: Colors.grey,
                       borderRadius: BorderRadius.only(

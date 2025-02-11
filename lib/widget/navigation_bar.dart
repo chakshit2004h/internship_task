@@ -22,13 +22,10 @@ class _NavigationBarState extends State<Navigation_Bar> {
     {'icon': Icons.home_outlined, 'label': '5G NR'},
     {'icon': Icons.cell_tower, 'label': 'Cell'},
     {'icon': Icons.area_chart_sharp, 'label': 'Charts'},
-    {'icon': Icons.table_bar_sharp, 'label': 'RF1'},
     {'icon': Icons.table_rows, 'label': 'Rach'},
-    {'icon': Icons.network_cell, 'label': '5G NR'},
     {'icon': Icons.radar, 'label': 'Beam'},
     {'icon': Icons.output, 'label': 'Throughput'},
     {'icon': Icons.width_wide, 'label': 'Spectrum'},
-    {'icon': Icons.settings_input_antenna, 'label': 'Throughput'},
     {'icon': Icons.single_bed, 'label': 'Signaling'},
     {'icon': Icons.map, 'label': 'Map'}
   ];

@@ -20,7 +20,7 @@ class _DrawerWidgetState extends State<drawer> {
       child: Container(
         width: mq.width * 0.7,
         decoration: const BoxDecoration(
-          color: Colors.black87,
+          color: Colors.black,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(16),
             bottomLeft: Radius.circular(16),
@@ -36,8 +36,8 @@ class _DrawerWidgetState extends State<drawer> {
                   children: [
                     SizedBox(height: 80),
                     Padding(
-                      padding: EdgeInsets.only(left: 185.0),
-                      child: Text("6.11.7.1", style: TextStyle(color: Colors.white)),
+                      padding: EdgeInsets.only(left: 180.0),
+                      child: Text("6.11.7.1", style: TextStyle(color: Colors.white),maxLines: 1,),
                     )
                   ],
                 ),
